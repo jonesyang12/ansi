@@ -21,8 +21,8 @@ func NewCmdParse() *CmdParse {
 	return c
 }
 
-// 从outChannel读取数据
-func receivedCmdOutChan(c *CmdParse) {
+// ReceivedCmdOutChan 从outChannel读取数据
+func ReceivedCmdOutChan(c *CmdParse) {
 	for inOutSlice := range c.CmdOutput {
 		readyParse := make([]*S, 0)
 		cmdMap := make(map[*S]*S)
